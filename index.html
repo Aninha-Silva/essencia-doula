@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essência Doula</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { display: flex; align-items: center; background: #e3d9c6; padding: 20px; }
+        header img { width: 100px; margin-right: 20px; }
+        .doulas { display: flex; justify-content: space-around; margin: 40px; }
+        .doula { text-align: center; margin: 0 20px; }
+        .doula img { margin-bottom: 10px; }
+        .benefits { display: flex; justify-content: space-between; margin: 40px; }
+        .benefits-text { width: 60%; }
+        .benefits img { width: 300px; height: 300px; object-fit: cover; }
+        .form { max-width: 400px; margin: auto; }
+        input, textarea { width: 100%; margin: 10px 0; padding: 10px; }
+        footer { text-align: center; padding: 20px; background: #e3d9c6; margin-top: 40px; }    
+        
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .popup button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="/src/logo.png" alt="Logo Essência Doula">
+    <h1>Essência Doula</h1>
+</header>
+<section style="background: #d1b9a1; padding: 20px; text-align: center;">
+    <h2>Conectando grávidas e doulas para uma jornada mais tranquila e segura!</h2>
+</section>
+
+<section class="doulas">
+    <div class="doula">
+        <img src="/src/doula1.png" alt="Doula 1" width="150">
+        <h2>Doula: Carla Ribeiro</h2>
+        <p>"Experimente o conforto e a confiança de ter uma doula dedicada ao seu lado. Faremos deste momento um capítulo de tranquilidade.</p>
+        <a href="mailto:carlaribeiro@email.com">Contratar</a>
+    </div>
+    <div class="doula">
+        <img src="/src/doula2.png" alt="Doula 1" width="150">
+        <h2>Doula: Laura Montino</h2>
+        <p>"Criando um ambiente de tranquilidade para você e seu bebê. Juntas, vamos tornar o seu parto uma celebração."</p>
+        <a href="mailto:lauramontino@email.com">Contratar</a>
+    </div>
+    <div class="doula">
+        <img src="/src/doula3.png" alt="Doula 1" width="150">
+        <h2>Doula: Stephany Ferreira</h2>
+        <p> "Transforme seu parto em uma experiência inesquecível com apoio personalizado e carinho."</p>
+        <a href="mailto:stephanyferreira@email.com">Contratar</a>
+    </div>
+</section>
+
+<section>
+    <h2 style="margin-left: 20px;">Principais benefícios de adotar uma Doula</h2>
+    <div class="benefits">
+        <div class="benefits-text">
+            <h3>Apoio Emocional</h3>
+            <p>Uma doula oferece suporte emocional contínuo, ajudando as mães a se sentirem mais seguras e confiantes durante a gestação e o parto.</p>
+            <h3>Informações sobre o Parto</h3>
+            <p>As doulas fornecem informações precisas e atualizadas sobre o processo do parto, permitindo que as mães tomem decisões informadas.</p>
+            <h3>Assistência Durante o Trabalho de Parto</h3>
+            <p>Durante o trabalho de parto, uma doula está ao lado da mãe, oferecendo conforto e técnicas de alívio da dor, além de apoiar a família.</p>
+        </div>
+        <img src="/src/doula12.jpeg" alt="Benefícios de Ter uma Doula">
+    </div>
+    <p  style="text-align: center; margin-bottom: 50px;"><a href="https://www.ifraldas.com.br/o-que-e-doula/?utm_term=&utm_campaign=Nova+Performance+Max&utm_source=Google-Ads&utm_medium=Pesquisa+Display&hsa_acc=4502862744&hsa_cam=11707557342&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjw-JG5BhBZEiwAt7JR6yGeq53x2UB8JW-53tPVqe5MYgIM_-dkXk4HB-jfAEmN55pf5BVh3xoCnb4QAvD_BwE" class="link-saber-mais">Saber mais</a></p>
+</section>
+
+<section class="form">
+    <h2>Dúvidas e Feedback</h2>
+    <form onsubmit="return showPopup();">
+        <input type="text" placeholder="Seu Nome" required>
+        <input type="email" placeholder="Seu E-mail" required>
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
+<div class="popup" id="popup">
+    <p>Sua mensagem foi enviada!</p>
+    <button onclick="closePopup()">Fechar</button>
+</div>
+
+<footer>
+    <img src="/src/logo.png" alt="Logo Essência Doula" width="50">
+    <p>©Todos os direitos reservados</p>
+</footer>
+
+<script>
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        return false; // Impede o envio real do formulário
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+
+</body>
+</html>
